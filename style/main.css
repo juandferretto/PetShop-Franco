@@ -1,0 +1,312 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow-x: unset;
+}
+
+.wrapper{
+    width: 98.7vw !important;
+    min-height: 100vh;
+}
+
+/* HEADER */
+header{
+    height: 55vh;
+    background-color: white;
+}
+
+.primerBanner{
+    background-color: rgb(156, 155, 155);
+}
+
+#logo{
+    height: 35vh;
+}
+
+.icono-facebook{
+    height: 4vh;
+}
+
+nav{
+    height: 10vh;   
+    width: 98.7vw;
+}
+
+#active{
+    border-top: 0.1em solid black;
+}
+
+.navbar-nav{
+    font-family: 'Mate SC', serif;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+nav a{
+    text-decoration: none;
+    margin-left: 30px;
+}
+
+/* MAIN */
+
+main{
+    min-width: 50vw !important;
+    min-height: 5vh !important;
+}
+
+.carrusel{
+    width: 98.7vw;
+}  
+
+.next{
+    height: 20%;
+}
+
+.retiro{
+    width: 98.7vw;
+}
+
+.retiros{
+    height: 20vh;
+}
+
+.juguetes{
+    width: 98.7vw;
+}
+
+hr{
+    width: 95vw;
+}
+
+.title-container{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.title{
+    background-color: rgba(0, 0, 0, 0.212);
+    font-style: oblique;
+}
+
+.cards img{
+    height: 15vh !important;
+    justify-content: center;
+}
+
+#img{
+    display: flex;
+    justify-content: center;
+}
+
+.cards{
+    width: 20%;
+    height: 40%;
+    flex-wrap: nowrap;
+    text-align: center;
+}
+
+.cards:hover{
+    border: 0.1em solid rgba(128, 128, 128, 0.678);
+}
+
+#cardsGeneral{
+    width: 100%;
+}
+
+#precio1{
+    color: grey;
+    text-decoration: line-through;
+}
+
+#precio{
+    color: grey;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.nosotros{
+    width: 98.7vw;
+}
+
+#text-nosotros{
+    width: 40%;
+    background-color: grey;
+    color: white;
+}
+
+#text-nosotros h2{
+    width: 60%;
+}
+
+#text-nosotros p{
+    width: 60%;
+}
+
+#carrusel-nosotros{
+    width: 40%;
+}
+
+#location{
+    width: 98.7vw;
+}
+
+#inner{
+    width: 98.7vw;
+    height: 10vh;
+    background-color: rgba(128, 128, 128, 0.514);
+}
+
+#text-html{
+    width: 98.7vw;
+}
+
+#text-inside{
+    border: 0.1em solid rgba(143, 141, 141, 0.658);
+    width: 10%;
+    background-color: white;
+    font-family: 'Mate SC', serif;
+}
+
+#box{
+    width: 98.7vw;
+    display: flex;
+    justify-content: center;
+}
+
+#img-cards-stock{
+    height: 20vh;
+}
+
+#stock{
+    width: 70vw;
+}
+
+.btn-stock{
+    width: 98.7vw;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.unidadesUltimas{
+    width: 10vw;
+    border-radius: 20%;
+    background-color: red;
+    color: white;
+    padding: 2px;
+}
+
+.unidades{
+    width: 10vw;
+    border-radius: 20%;
+    background-color: green;
+    color: white;
+    padding: 2px;
+}
+
+.cuadrado-img{
+    border: 0.1em solid black;
+    height: 23vh;
+}
+
+#signo{
+    height: 4vh;
+}
+
+#text-inside-med{
+    border: 0.1em solid rgba(143, 141, 141, 0.658);
+    width: 12%;
+    background-color: white;
+    font-family: 'Mate SC', serif
+}
+
+#form{
+    width: 50vw;
+    background-color: rgba(0, 0, 0, 0.459);
+}
+
+form{
+    width: 50vw;
+}
+
+.name{
+    height: 3vh;
+}
+
+.btn{
+    min-width: 15vw;
+}
+
+#table{
+    width: 98.7vw;
+    display: flex;
+    justify-content: center;
+}
+
+.table{
+    width: 80%;
+}
+
+#thead-stock{
+    background-color: rgba(128, 128, 128, 0.658);
+    color: white;
+}
+
+.text-stock{
+    color: rgba(80, 79, 79, 0.788);
+    font-size: 15px;
+    font-style: italic;
+}
+
+#img-cards-stock-table{
+    height: 10vh;
+}
+
+#text-inside-carrito{
+    border: 0.1em solid black;
+    min-width: 5vw;
+}
+
+#btn-carrito-cantidad{
+    min-width: 2vw;
+}
+
+#logo-compra{
+    height: 100%;
+}
+
+#compra-segura{
+    height: 20%;
+}
+
+#header-compra{
+    height: 20vh;
+}
+
+#body-compra{
+    width: 100%;
+    min-height: 80vh;
+}
+
+#comprar-ahora{
+    width: 20vw;
+    margin-right: 50px;
+    margin-left: 30px;
+}
+
+#table-compra{
+    width: 50vw;
+}
+
+.btn-dark{
+    border-radius: 10%;
+    color: white;
+}
+
+.anchor-botones{
+    text-decoration: none;
+    color: white;
+}

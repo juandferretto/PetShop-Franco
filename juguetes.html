@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juguetes - Franco</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <link rel="shortcut icon" href="./img/apple-icon-76x76.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style/main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mate+SC&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="app">
+        <header class="d-flex flex-column">
+            <div class="d-flex justify-content-between primerBanner">
+                <div class="ms-2 mt-3">
+                    <a href="https://www.facebook.com/juandiego.ferretto"><img src="./img/icono-facebook.png" alt=""
+                            class="icono-facebook"></a>
+                    <a href="https://www.instagram.com/juandiegoferretto/"><img src="./img/icono-instagram.png" alt=""
+                            class="icono-facebook"></a>
+                </div>
+                <div class="d-flex me-4 mt-3">
+                    <a href="carrito.html"><img src="./img/icono-carrito.png" alt="" class="icono-facebook align-items-center"></a>
+                    <p class="text-strong" id="numeroCarrito" v-if="cantidadDeProductos == 0">(0)</p>
+                    <p class="text-strong text-danger fw-bold" id="numeroCarrito" v-else="cantidadDeProductos > 0">({{cantidadDeProductos}})</p>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center">
+                <img src="./img/logo.png" alt="logo" id="logo">
+            </div>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid">
+                    <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+                        <div class="navbar-nav">
+                            <a class="nav-link" href="index.html">Inicio</a>
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                            <a class="nav-link active" id="active" aria-current="page" href="juguetes.html">Juguetes</a>
+                            <a class="nav-link" href="farmacia.html">Farmacia</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main class="animate__animated animate__zoomInUp">
+            <section class="d-flex flex-column mb-5">
+                <div class="d-flex flex-column text-center mt-4" id="text-html">
+                    <div id="box">
+                        <p id="text-inside">JUGUETES</p>
+                    </div>
+                </div>
+                <div class="d-flex flex-column" id="stock">
+                    <div v-for="juguete in juguetesMenosStock">
+                        <div class="d-flex flex-column">
+                            <hr class="title-line ms-4">
+                            <div class="d-flex ms-4">
+                                <div class="cuadrado-img">
+                                    <img :src="juguete.imagen" alt="cards" id="img-cards-stock">
+                                </div>
+                                <div class="d-flex flex-column ms-4">
+                                    <p class="fs-5 fw-lighter">{{juguete.nombre}}</p>
+                                    <p class="fs-5 fw-bold">${{juguete.precio}}</p>
+                                    <p class="unidadesUltimas">Ultimas Unidades</p>
+                                    <p>Stock: {{juguete.stock}}</p>
+                                </div>
+                            </div>
+                            <div class="btn-stock">
+                                <button v-if="juguete.stock > 0" class="btn btn-dark me-4" @click="agregarAlCarrito(juguete)">Agregar al carrito</button>
+                                <button v-else class="btn btn-dark me-4" disabled>No hay mas stock</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div v-for="juguete in juguetesMasStock">
+                        <div class="d-flex flex-column">
+                            <hr class="title-line ms-4">
+                            <div class="d-flex ms-4">
+                                <div class="cuadrado-img">
+                                    <img :src="juguete.imagen" alt="cards" id="img-cards-stock">
+                                </div>
+                                <div class="d-flex flex-column ms-4">
+                                    <p class="fs-5 fw-lighter">{{juguete.nombre}}</p>
+                                    <p class="fs-5 fw-bold">${{juguete.precio}}</p>
+                                    <p class="unidades">Stock Disponible</p>
+                                    <p>Stock: {{juguete.stock}}</p>
+                                </div>
+                            </div>
+                            <div class="btn-stock">
+                                <button v-if="juguete.stock > 0" class="btn btn-dark me-4" @click="addCart(juguete)">Agregar al carrito</button>
+                                <button v-else class="btn btn-dark me-4" disabled>No hay mas stock</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex text-center">
+                    <img src="./img/signo.png" alt="signo" id="signo" class="ms-2">
+                    <p class="ms-2">Proximamente mas unidades en stock.</p>
+                </div>
+            </section>
+            <div class="d-flex justify-content-between mt-3 align-items-center" id="inner">
+                <div class="ms-2 align-items-center">
+                    <p class="mt-4">Todos los derechos reservados || © Juan Diego Ferretto - 2021</p>
+                </div>
+                <div class="me-2">
+                    <a href="https://www.facebook.com/juandiego.ferretto"><img src="./img/icono-facebook.png" alt=""
+                            class="icono-facebook"></a>
+                    <a href="https://www.instagram.com/juandiegoferretto/"><img src="./img/icono-instagram.png" alt=""
+                            class="icono-facebook"></a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="./script/main.js"></script>
+</body>
+
+</html>

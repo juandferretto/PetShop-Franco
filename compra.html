@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juguetes - Franco</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="shortcut icon" href="./img/apple-icon-76x76.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style/main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mate+SC&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="app">
+        <header class="d-flex justify-content-between bg-secondary" id="header-compra">
+            <div class="">
+                <img src="./img/logo.png" alt="" id="logo-compra">
+            </div>
+            <div class="d-flex flex-column align-items-center justify-content-center me-3">
+                <img src="./img/safe-shopping.svg" alt="" id="compra-segura">
+                <p>COMPRA SEGURA</p>
+            </div>
+        </header>
+        <main class="animate__animated animate__zoomInUp">
+            <div class="d-flex justify-content-between" id="body-compra">
+                <div class="d-flex flex-column justify-content-center gap-3" id="comprar-ahora">
+                    <h3>¿DESEA COMPRAR LOS PRODUCTOS ELEGIDOS?</h3>
+                    <span class="fst-5 text-danger">Total: ${{precioTotalCarrito}}</span>
+                    <button @click="limpiarCarrito" id="boton-comprar">COMPRAR AHORA</button>
+                    <button><a href="index.html"> VOLVER A LA PAGINA PRINCIPAL </a></button>
+                </div>
+                <table class="table table-responsive mt-3 mb-3 me-3" id="table-compra">
+                    <thead id="thead-stock">
+                        <tr class="text-center">
+                            <th>Producto</th>
+                            <th>Cantidad</th>
+                            <th>Precio</th>
+                            <th>Subtotal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr v-for="producto in carrito">
+                            <td class="text-stock"><img id="img-cards-stock-table" :src="producto.imagen" alt=""
+                                    class="me-2">{{producto.nombre}}</td>
+                            <td class="text-center">{{producto.cant}}</td>
+                            <td class="text-center">${{producto.precio}}</td>
+                            <td class="text-center">${{producto.precio * producto.cant}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="d-flex justify-content-between mt-3 align-items-center" id="inner">
+                <div class="ms-2 align-items-center">
+                    <p class="mt-4">Todos los derechos reservados || © Juan Diego Ferretto - 2021</p>
+                </div>
+                <div class="me-2">
+                    <a href="https://www.facebook.com/juandiego.ferretto"><img src="./img/icono-facebook.png" alt=""
+                            class="icono-facebook"></a>
+                    <a href="https://www.instagram.com/juandiegoferretto/"><img src="./img/icono-instagram.png" alt=""
+                            class="icono-facebook"></a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="./script/main.js"></script>
+</body>
+
+</html>

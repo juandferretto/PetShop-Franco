@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Franco - Petshop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="icon" href="./img/apple-icon-76x76.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style/main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mate+SC&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="app" class="wrapper d-flex flex-column">
+        <!-- HEADER -->
+        <header class="d-flex flex-column">
+            <div class="d-flex justify-content-between primerBanner">
+                <div class="ms-2 mt-3">
+                    <a href="https://www.facebook.com/juandiego.ferretto"><img src="./img/icono-facebook.png" alt=""
+                            class="icono-facebook"></a>
+                    <a href="https://www.instagram.com/juandiegoferretto/"><img src="./img/icono-instagram.png" alt=""
+                            class="icono-facebook"></a>
+                </div>
+                <div class="d-flex me-4 mt-3">
+                    <a href="carrito.html"><img src="./img/icono-carrito.png" alt=""
+                            class="icono-facebook align-items-center"></a>
+                    <p class="text-strong" id="numeroCarrito" v-if="cantidadDeProductos == 0">(0)</p>
+                    <p class="text-strong text-danger fw-bold" id="numeroCarrito" v-else="cantidadDeProductos > 0">
+                        ({{cantidadDeProductos}})</p>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center animate__animated animate__rotateIn">
+                <img src="./img/logo.png" alt="logo" id="logo">
+            </div>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid">
+                    <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+                        <div class="navbar-nav">
+                            <a class="nav-link active" id="active" aria-current="page" href="index.html">Inicio</a>
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                            <a class="nav-link" href="juguetes.html">Juguetes</a>
+                            <a class="nav-link" href="farmacia.html">Farmacia</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- TERMINA HEADER -->
+        <main class="animate__animated animate__fadeInUpBig">
+            <section class="carrusel">
+                <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./img/bannerBienvenida.png" class="d-block w-100 img-carrousel" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/envios.png" class="d-block w-100 img-carrousel" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/contacto-banner.png" class="d-block w-100 img-carrousel" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon next bg-dark" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon next bg-dark" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </section>
+            <section class=" retiro d-flex justify-content-center gap-5 mt-4 mb-5">
+                <img src="./img/retiroSucursal.png" alt="" class="retiros">
+                <img src="./img/mercado-pago.png" alt="" class="retiros">
+            </section>
+            <hr class="title-line ms-3">
+            <section class="d-flex flex-column text-center nosotros">
+                <h1 class="mb-3 fst-italic">NOSOTROS</h1>
+                <div class="d-flex gap-4 justify-content-center">
+                    <div id="text-nosotros" class="d-flex flex-column justify-content-center align-items-center">
+                        <h2>Somos fanáticos de los animales.</h2>
+                        <p class="fst-italic">En Franco, somos un equipo de veterinarios y asesores que creamos
+                            relaciones basadas en la confianza y juntos nos comprometemos a cuidar a tu mascota como si
+                            fuera nuestra. Ofrecemos servicios y productos de primera calidad para que el vínculo entre
+                            tu mascota y vos sea más fuerte y mejor.</p>
+                    </div>
+                    <div id="carrusel-nosotros">
+                        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="./img/nosotros1.png" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="./img/nosotros2.png" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="./img/nosotros3.png" class="d-block w-100" alt="...">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="juguetes d-flex flex-column align-items-center">
+                <div class="title-container align-items-center text-aling-center">
+                    <hr class="">
+                    <h2 class="title text-align-center">Juguetes Destacados</h2>
+                </div>
+                <div class="d-flex justify-content-around mt-2 mb-2" id="cardsGeneral">
+                    <div v-for="juguete in juguetesDestacados" class="cards">
+                        <div id="img" class="mt-2">
+                            <img :src="juguete.imagen" alt="">
+                        </div>
+                        <p class="fst-italic mt-2">{{juguete.nombre}}</p>
+                        <div class="d-flex gap-2 justify-content-center">
+                            <p id="precio1">${{juguete.precio + 600}}</p>
+                            <p id="precio">${{juguete.precio}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <a href="juguetes.html" class="btn btn-outline-secondary mb-2 mt-2">Ver mas juguetes</a>
+                </div>
+            </section>
+            <hr class="ms-3">
+            <section class="d-flex justify-content-around" id="location">
+                <div class="d-flex flex-column justify-content-center">
+                    <h1 class="mb-3 fst-italic">SUCURSAL</h1>
+                    <p>CABALLITO</p>
+                    <p>Rio de Janeiro 300</p>
+                    <p>L a V de 9 a 19 hs. Sábados de 9 a 14 hs</p>
+                </div>
+                <div>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.6871479079027!2d-58.432567885194906!3d-34.61207176544629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca429815227f%3A0x5d302e497c2cda87!2sR%C3%ADo%20de%20Janeiro%20300%2C%20C1405%20CCB%2C%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1622682939967!5m2!1ses!2sar"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </section>
+            <div class="d-flex justify-content-between mt-3 align-items-center" id="inner">
+                <div class="ms-2 align-items-center">
+                    <p class="mt-4">Todos los derechos reservados || © Juan Diego Ferretto - 2021</p>
+                </div>
+                <div class="me-2">
+                    <a href="https://www.facebook.com/juandiego.ferretto"><img src="./img/icono-facebook.png" alt=""
+                            class="icono-facebook"></a>
+                    <a href="https://www.instagram.com/juandiegoferretto/"><img src="./img/icono-instagram.png" alt=""
+                            class="icono-facebook"></a>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="./script/main.js"></script>
+</body>
+
+</html>
