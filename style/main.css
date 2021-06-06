@@ -31,6 +31,11 @@ header{
     height: 4vh;
 }
 
+nav{
+    height: 10vh;   
+    width: 98.7vw;
+}
+
 #active{
     border-top: 0.1em solid black;
 }
@@ -267,7 +272,7 @@ form{
 }
 
 #button-vaciarCarrito{
-    width: 100%;
+    width: 94vw;
     margin-right: 15vw;
 }
 
@@ -321,28 +326,4 @@ form{
 
 #button-vaciarCarrito{
     margin-left: 70px;
-}
-
-/* RESPONSIVE */
-
-@media screen and (max-width: 600px){
-    #text-nosotros{
-        height: 41vh;
-    }
-
-    #text-nosotros h2{
-        margin-top: 10px;
-        font-size:100%;
-    }
-
-    .fst-italic{
-        font-size: 10%;
-    }
-    
-
-    #mapa{
-        margin-left: 10px;
-        width: 40vw;
-        height: 40vh;
-    }
 }
