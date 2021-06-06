@@ -59,10 +59,53 @@ const app = Vue.createApp({
         },
 
         limpiarCarrito(){
-            this.carrito = []
-            localStorage.removeItem("carrito")
+
+            swal({
+                title: "Estas seguro que deseas vaciarlo?",
+                icon: "warning",
+                buttons: true,
+                dangerMode: true,
+              })
+              .then((willDelete) => {
+                if (willDelete) {
+                    this.carrito = []
+                    localStorage.removeItem("carrito")
+                  swal({
+                    text: "Carrito vaciado",
+                    icon: "success",
+                  });
+                }
+              });
+              
         },
 
+        limpiarCarritoCompra(){
+            if(this.carrito.length > 0) {
+            swal({
+                title: "Estas seguro que deseas efectuar la compra?",
+                icon: "warning",
+                buttons: true,
+                dangerMode: true,
+              })
+              .then((willDelete) => {
+                if (willDelete) {
+                    this.carrito = []
+                    localStorage.removeItem("carrito")
+                  swal({
+                    text: "Compra realizada",
+                    icon: "success",
+                  });
+                }
+              });
+            }else{
+                swal({
+                    title: "No tienes ningun producto agregado",
+                    text: "Elige los productos e intente nuevamente.",
+                    icon: "warning",
+                    button: "Ok",
+                  });
+            }
+        }
         
     },
 
@@ -91,22 +134,6 @@ if (btnForm) {
         swal({
             title: "Buen trabajo!",
             text: "Gracias por contactarte con nosotros",
-            icon: "success",
-            button: "Volver",
-        });
-    })
-}
-
-
-let btnComprar = document.getElementById("boton-comprar")
-
-
-if (btnComprar) {
-    btnComprar.addEventListener("click", (e) => {
-        e.preventDefault();
-        swal({
-            title: "Buen trabajo!",
-            text: "Gracias por tu compra (revisa el correo con el estado de tu pedido)",
             icon: "success",
             button: "Volver",
         });

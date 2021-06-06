@@ -56,64 +56,50 @@
                 <div class="ms-3 mt-5">
                     <img src="./img/img-contacto.png" alt="">
                 </div>
-                <div id="form" class="ms-3 mt-5">
-                    <form class="d-flex flex-column" id="formulario">
-                        <h6 class="m-2">*Complete los datos segun corresponda.</h6>
-                        <div class="d-flex justify-content center gap-5 mt-2 ms-3">
-                            <label for="nombre">
-                                <img src="./img/nombre.png" alt="" class="name">
-                                <span>Nombre:</span>
-                                <input type="text" nombre="" required placeholder="Nombre" id="nombre" class="ms-2">
-                            </label>
-                            <label for="apellido">
-                                <img src="./img/nombre.png" alt="" class="name">
-                                <span>Apellido:</span>
-                                <input type="text" apellido="" required placeholder="Apellido" id="apellido"
-                                    class="ms-2">
-                            </label>
-                        </div>
-                        <div class="d-flex justify-content center gap-5 mt-3 ms-3">
-                            <label for="email">
-                                <img src="./img/email.png" alt="" class="name">
-                                <span class="ms-1">Email:</span>
-                                <input type="email" name="" required placeholder="email@hotmail.com" id="email"
-                                    class="ms-2">
-                            </label>
-                        </div>
-                        <div class="d-flex justify-content center gap-5 mt-3 ms-3">
-                            <label for="telefono">
-                                <img src="./img/telefono.png" alt="" class="name">
-                                <span>Telefono:</span>
-                                <input type="text" name="" required placeholder="Telefono" id="telefono" class="ms-2">
-                            </label>
-                        </div>
-                        <div class="d-flex justify-content center gap-5 mt-3 ms-3">
-                            <p>=> Indique si tiene perro o gato:</p>
-                            <label for="perro">
-                                <span>Perro</span>
-                                <input type="checkbox" name="" id="perro" class="ms-2">
-                            </label>
-                            <label for="gato">
-                                <span>Gato</span>
-                                <input type="checkbox" name="" id="gato" class="ms-2">
-                            </label>
-                        </div>
-                        <div class="d-flex justify-content center gap-5 mt-3 ms-3">
-                            <div>
-                                <img src="./img/comentario.png" alt="" class="name me-2">
-                                <span>Deje su comentario:</span>
+                <div class="mt-5" id="form-out">
+                    <h3 class="text-center mt-2 fst-italic">CONTACTO</h3>
+                    <div>
+                        <form>
+                            <div class="row ms-3 me-3 mt-3">
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="Nombre"
+                                        aria-label="First name">
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="Apellido"
+                                        aria-label="Last name">
+                                </div>
                             </div>
-                            <label for="comentarios">
-                                <textarea name="" id="comentarios" placeholder="Escriba aqui" cols="30"
-                                    rows="10"></textarea>
-                            </label>
-                        </div>
-                        <div class="d-flex justify-content-center mt-2">
-                            <button id="boton-contacto" class="btn btn-dark" type="submit">Enviar</button>
-                        </div>
-                    </form>
+                            <div class="mt-3 ms-4 me-4 d-flex flex-column align-items-center">
+                                <input type="email" class="form-control" placeholder="Email" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp">
+                                <div id="emailHelp" class="form-text">Nunca compartiremos su correo electrónico con
+                                    nadie más.
+                                </div>
+                            </div>
+                            <div class="d-flex gap-5 ms-4 me-3 mt-3 justify-content-center">
+                                <input class="form-control numero" type="text" placeholder="Número"
+                                    aria-label="default input example">
+                                <select class="form-select numero" aria-label="Default select example">
+                                    <option selected>Elige tu mascota</option>
+                                    <option value="1">Perro</option>
+                                    <option value="2">Gato</option>
+                                    <option value="3">Otro</option>
+                                </select>
+                            </div>
+                            <div class="d-flex justify-content-center mt-3 ms-4 ">
+                                <textarea placeholder="Deje su comentario" class="form-control comentario"
+                                    id="exampleFormControlTextarea1" rows="10"></textarea>
+                            </div>
+                            <div class="d-flex justify-content-center mt-2">
+                                <button id="boton-contacto" class="btn-dark btn-contacto">Enviar</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
+        </main>
+        <footer>
             <div class="d-flex justify-content-between mt-3 align-items-center" id="inner">
                 <div class="ms-2 align-items-center">
                     <p class="mt-4">Todos los derechos reservados || © Juan Diego Ferretto - 2021</p>
@@ -125,7 +111,7 @@
                             class="icono-facebook"></a>
                 </div>
             </div>
-        </main>
+        </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"

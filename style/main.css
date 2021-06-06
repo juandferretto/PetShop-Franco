@@ -31,11 +31,6 @@ header{
     height: 4vh;
 }
 
-nav{
-    height: 10vh;   
-    width: 98.7vw;
-}
-
 #active{
     border-top: 0.1em solid black;
 }
@@ -223,22 +218,28 @@ hr{
     font-family: 'Mate SC', serif
 }
 
-#form{
-    width: 50vw;
-    background-color: rgba(0, 0, 0, 0.459);
+#form-out{
+    margin-left: 20px;
+    background-color: rgba(104, 103, 100, 0.438);
+} 
+
+.numero{
+    width: 40%;
 }
 
 form{
     width: 50vw;
 }
 
-.name{
-    height: 3vh;
+.comentario{
+    width: 70%;
 }
 
-.btn{
-    min-width: 15vw;
+.btn-contacto{
+    padding: 5px;
+    width: 20%;
 }
+
 
 #table{
     width: 98.7vw;
@@ -263,6 +264,11 @@ form{
 
 #img-cards-stock-table{
     height: 10vh;
+}
+
+#button-vaciarCarrito{
+    width: 100%;
+    margin-right: 15vw;
 }
 
 #text-inside-carrito{
@@ -299,6 +305,7 @@ form{
 
 #table-compra{
     width: 50vw;
+    height: 5vh;
 }
 
 .btn-dark{
@@ -309,4 +316,33 @@ form{
 .anchor-botones{
     text-decoration: none;
     color: white;
+    height: 10vh;
+}
+
+#button-vaciarCarrito{
+    margin-left: 70px;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 600px){
+    #text-nosotros{
+        height: 41vh;
+    }
+
+    #text-nosotros h2{
+        margin-top: 10px;
+        font-size:100%;
+    }
+
+    .fst-italic{
+        font-size: 10%;
+    }
+    
+
+    #mapa{
+        margin-left: 10px;
+        width: 40vw;
+        height: 40vh;
+    }
 }

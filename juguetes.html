@@ -78,8 +78,8 @@
                             </div>
                         </div>
                     </div>
-                    <div v-for="juguete in juguetesMasStock">
-                        <div class="d-flex flex-column">
+                    <div>
+                        <div class="d-flex flex-column" v-for="juguete in juguetesMasStock">
                             <hr class="title-line ms-4">
                             <div class="d-flex ms-4">
                                 <div class="cuadrado-img">
@@ -93,7 +93,7 @@
                                 </div>
                             </div>
                             <div class="btn-stock">
-                                <button v-if="juguete.stock > 0" class="btn btn-dark me-4" @click="addCart(juguete)">Agregar al carrito</button>
+                                <button v-if="juguete.stock > 0" class="btn btn-dark me-4" @click="agregarAlCarrito(juguete)">Agregar al carrito</button>
                                 <button v-else class="btn btn-dark me-4" disabled>No hay mas stock</button>
                             </div>
                         </div>
