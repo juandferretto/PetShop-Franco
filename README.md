@@ -6,5 +6,5 @@ Aplicación desarrollada en tres días, con el fin de producir el trabajo final 
 https://juandferretto.github.io/PetShop-Franco/
 
 # -Desarrollado con las siguientes tecnologías:
-> <p>*HTML5<br>*CSS3<br>*JavaScript<br>*BootStrap<br>*VUE3</p>  
+> <p>*HTML5<br>*CSS3<br>*JavaScript<br>*BootStrap<br>*VUE3</p> 
 

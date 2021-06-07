@@ -30,7 +30,7 @@
                     <a href="carrito.html"><img src="./img/icono-carrito.png" alt=""
                             class="icono-facebook align-items-center"></a>
                     <p class="text-strong" id="numeroCarrito" v-if="cantidadDeProductos == 0">(0)</p>
-                    <p class="text-strong text-danger fw-bold" id="numeroCarrito" v-else="cantidadDeProductos > 0">
+                    <p v-cloack class="text-strong text-danger fw-bold" id="numeroCarrito" v-else="cantidadDeProductos > 0">
                         ({{cantidadDeProductos}})</p>
                 </div>
             </div>

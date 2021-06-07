@@ -55,58 +55,77 @@ const app = Vue.createApp({
 
             juguete.stock--;
             localStorage.setItem("carrito", JSON.stringify(this.carrito))
+            toastr["success"]("Producto agregado correctamente.")
+
+            toastr.options = {
+                "closeButton": false,
+                "debug": false,
+                "newestOnTop": false,
+                "progressBar": false,
+                "positionClass": "toast-top-right",
+                "preventDuplicates": false,
+                "onclick": null,
+                "showDuration": "300",
+                "hideDuration": "1000",
+                "timeOut": "1500",
+                "extendedTimeOut": "1000",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut"
+            }
 
         },
 
-        limpiarCarrito(){
+        limpiarCarrito() {
 
             swal({
                 title: "Estas seguro que deseas vaciarlo?",
                 icon: "warning",
                 buttons: true,
                 dangerMode: true,
-              })
-              .then((willDelete) => {
-                if (willDelete) {
-                    this.carrito = []
-                    localStorage.removeItem("carrito")
-                  swal({
-                    text: "Carrito vaciado",
-                    icon: "success",
-                  });
-                }
-              });
-              
+            })
+                .then((willDelete) => {
+                    if (willDelete) {
+                        this.carrito = []
+                        localStorage.removeItem("carrito")
+                        swal({
+                            text: "Carrito vaciado",
+                            icon: "success",
+                        });
+                    }
+                });
+
         },
 
-        limpiarCarritoCompra(){
-            if(this.carrito.length > 0) {
-            swal({
-                title: "Estas seguro que deseas efectuar la compra?",
-                icon: "warning",
-                buttons: true,
-                dangerMode: true,
-              })
-              .then((willDelete) => {
-                if (willDelete) {
-                    this.carrito = []
-                    localStorage.removeItem("carrito")
-                  swal({
-                    text: "Compra realizada",
-                    icon: "success",
-                  });
-                }
-              });
-            }else{
+        limpiarCarritoCompra() {
+            if (this.carrito.length > 0) {
+                swal({
+                    title: "Estas seguro que deseas efectuar la compra?",
+                    icon: "warning",
+                    buttons: true,
+                    dangerMode: true,
+                })
+                    .then((willDelete) => {
+                        if (willDelete) {
+                            this.carrito = []
+                            localStorage.removeItem("carrito")
+                            swal({
+                                text: "Compra realizada",
+                                icon: "success",
+                            });
+                        }
+                    });
+            } else {
                 swal({
                     title: "No tienes ningun producto agregado",
                     text: "Elige los productos e intente nuevamente.",
                     icon: "warning",
                     button: "Ok",
-                  });
+                });
             }
         }
-        
+
     },
 
     computed: {
@@ -139,3 +158,4 @@ if (btnForm) {
         });
     })
 }
+

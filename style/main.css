@@ -4,10 +4,6 @@
     box-sizing: border-box;
 }
 
-body{
-    overflow-x: unset;
-}
-
 .wrapper{
     width: 98.7vw !important;
     min-height: 100vh;
