@@ -11,7 +11,7 @@
 
 /* HEADER */
 header{
-    height: 55vh;
+    height: 35vh;
     background-color: white;
 }
 
@@ -20,7 +20,7 @@ header{
 }
 
 #logo{
-    height: 35vh;
+    height: 25vh;
 }
 
 .icono-facebook{
@@ -51,7 +51,7 @@ nav a{
 
 main{
     min-width: 50vw !important;
-    min-height: 5vh !important;
+    min-height: 55vh !important;
 }
 
 .carrusel{

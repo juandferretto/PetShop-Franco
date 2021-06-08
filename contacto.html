@@ -26,6 +26,9 @@
                     <a href="https://www.instagram.com/juandiegoferretto/"><img src="./img/icono-instagram.png" alt=""
                             class="icono-facebook"></a>
                 </div>
+                <div>
+                    <img src="./img/logo.png" alt="logo" id="logo">
+                </div>
                 <div class="d-flex me-4 mt-3">
                     <a href="carrito.html"><img src="./img/icono-carrito.png" alt=""
                             class="icono-facebook align-items-center"></a>
@@ -33,9 +36,6 @@
                     <p class="text-strong text-danger fw-bold" id="numeroCarrito" v-else="cantidadDeProductos > 0">
                         ({{cantidadDeProductos}})</p>
                 </div>
-            </div>
-            <div class="d-flex justify-content-center">
-                <img src="./img/logo.png" alt="logo" id="logo">
             </div>
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="container-fluid">
@@ -51,12 +51,12 @@
             </nav>
         </header>
         <!-- TERMINA HEADER -->
-        <main>
+        <main class="bg-light">
             <div class="d-flex animate__animated animate__fadeInUpBig">
-                <div class="ms-3 mt-5">
+                <div class="ms-3">
                     <img src="./img/img-contacto.png" alt="">
                 </div>
-                <div class="mt-5" id="form-out">
+                <div id="form-out">
                     <h3 class="text-center mt-2 fst-italic">CONTACTO</h3>
                     <div>
                         <form>

@@ -25,6 +25,9 @@
                     <a href="https://www.instagram.com/juandiegoferretto/"><img src="./img/icono-instagram.png" alt=""
                             class="icono-facebook"></a>
                 </div>
+                <div>
+                    <img src="./img/logo.png" alt="logo" id="logo">
+                </div>
                 <div class="d-flex me-4 mt-3">
                     <a href="carrito.html"><img src="./img/icono-carrito.png" alt=""
                             class="icono-facebook align-items-center"></a>
@@ -32,9 +35,6 @@
                     <p class="text-strong text-danger fw-bold" id="numeroCarrito" v-else="cantidadDeProductos > 0">
                         ({{cantidadDeProductos}})</p>
                 </div>
-            </div>
-            <div class="d-flex justify-content-center">
-                <img src="./img/logo.png" alt="logo" id="logo">
             </div>
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="container-fluid">
@@ -49,7 +49,7 @@
                 </div>
             </nav>
         </header>
-        <main class="animate__animated animate__zoomInUp">
+        <main class="animate__animated animate__zoomInUp" id="main-carrito">
             <div id="box">
                 <p id="text-inside-carrito" class="p-1">CARRITO</p>
             </div>
@@ -89,18 +89,18 @@
                     <button @click="limpiarCarrito" class="btn-dark mt-2 mb-3 me-5 p-2">Vaciar carrito</button>
                 </div>
             </div>
-            <div class="d-flex justify-content-between mt-3 align-items-center" id="inner">
-                <div class="ms-2 align-items-center">
-                    <p class="mt-4">Todos los derechos reservados || © Juan Diego Ferretto - 2021</p>
-                </div>
-                <div class="me-2">
-                    <a href="https://www.facebook.com/juandiego.ferretto"><img src="./img/icono-facebook.png" alt=""
-                            class="icono-facebook"></a>
-                    <a href="https://www.instagram.com/juandiegoferretto/"><img src="./img/icono-instagram.png" alt=""
-                            class="icono-facebook"></a>
-                </div>
-            </div>
         </main>
+        <footer class="d-flex justify-content-between mt-3 align-items-center" id="inner">
+            <div class="ms-2 align-items-center">
+                <p class="mt-4">Todos los derechos reservados || © Juan Diego Ferretto - 2021</p>
+            </div>
+            <div class="me-2">
+                <a href="https://www.facebook.com/juandiego.ferretto"><img src="./img/icono-facebook.png" alt=""
+                        class="icono-facebook"></a>
+                <a href="https://www.instagram.com/juandiegoferretto/"><img src="./img/icono-instagram.png" alt=""
+                        class="icono-facebook"></a>
+            </div>
+        </footer>
     </div>
 
 
