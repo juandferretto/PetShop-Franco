@@ -1,5 +1,5 @@
 # -PetShop-Franco
-Aplicación web dinámica sobre un PetShop convencional, empleando una API para la simulación del listado de productos (no es responsivo).
+Mi primer aplicación web dinámica sobre un PetShop convencional, empleando una API para la simulación del listado de productos.
 
 # -Acerca del repositorio
 Aplicación desarrollada en tres días, con el fin de producir el trabajo final del módulo "Front End" (BootCamp de MindHub).
